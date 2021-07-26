@@ -1,0 +1,42 @@
+{
+  "name": "ckstatic01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.main.js"
+  },
+  "author": "James Hibbard",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^5.8.5",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "express-session": "^1.17.2",
+    "firebase": "^8.6.8",
+    "firebase-admin": "^9.9.0",
+    "hbs": "^4.1.2",
+    "jquery": "^3.5.1",
+    "jsonwebtoken": "^8.5.1",
+    "lightbox2": "^2.11.3",
+    "moment": "^2.29.1",
+    "mongoose": "^5.12.14",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.6.3",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "session-file-store": "^1.5.0",
+    "slick-carousel": "^1.8.1",
+    "webpack": "^5.39.1"
+  },
+  "devDependencies": {
+    "css-loader": "^5.2.6",
+    "mini-css-extract-plugin": "^1.6.0",
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1",
+    "webpack-cli": "^4.7.2"
+  }
+}

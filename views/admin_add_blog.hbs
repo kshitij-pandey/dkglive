@@ -1,0 +1,43 @@
+<div class="blog-header" style="margin-top: 5rem;">
+    <h2>NEW BLOGS</h2>
+    <button type="submit" form="addBlog">SAVE & POST</button>
+</div>
+
+<section class="blog">
+    <div class="blog-pictures">
+        <form id="addBlog" action="/add_blog" method="POST" enctype="multipart/form-data">
+            <div class="input">
+                <p>Upload Pictures
+                </p>
+                <label for="picture">Upload Pictures</label>
+                <input id="picture" name="file" type="file" form="addBlog" hidden multiple onchange="readURL(this);">
+            </div>
+            <div id="preview-img-container" class="pic-preview">
+                <div class="input-pic">
+                    {{# if blog.imgUrl}}
+                    <img id="preview-img" src="{{blog.imgUrl}}" alt="">
+                    <a id="remove-preview-img-btn" href="">Remove photo</a>
+                    {{else}}
+                    <img id="preview-img" src="#" alt="">
+                    {{/ if}}
+                    <a id="remove-preview-img-btn" href="" hidden>Remove photo</a>
+                </div>
+                {{!-- <div class="input-pic">
+                    <img src="../../img/gst_thumb.png" alt="">
+                    <a href="">Remove photo</a>
+                </div> --}}
+            </div>
+
+            <input type="text" hidden name="blog_id" value="{{blog._id}}" id="blog_id">
+            <div class="form-control">
+                <label for="">Blog Title</label>
+                <input type="text" name="blog_title" value="{{blog.title}}" id="blog_title">
+            </div>
+            <div class="form-control">
+                <label for="">Write your Blog</label>
+                <textarea type="text" name="blog_para" id="blog_para" cols="30"
+                    rows="10">{{blog.description}}</textarea>
+            </div>
+        </form>
+    </div>
+</section>

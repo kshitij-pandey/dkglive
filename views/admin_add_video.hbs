@@ -1,0 +1,20 @@
+<div class="blog-header" style="margin-top: 5rem;">
+    <h2>NEW VIDEO</h2>
+    <button type="submit" form="addVideo">SAVE & POST</button>
+</div>
+
+<section class="blog">
+    <div class="blog-pictures">
+        <form id="addVideo" action="/add_video" method="POST">
+            <input type="text" hidden name="video_id" value="{{blog._id}}" id="video_id">
+            <div class="form-control">
+                <label for="">Name your video</label>
+                <input type="text" name="video_name" value="{{blog.name}}" id="video_name">
+            </div>
+            <div class="form-control">
+                <label for="">Link to your video</label>
+                <input type="text" name="video_url" value="{{blog.title}}" id="video_url">
+            </div>
+        </form>
+    </div>
+</section>

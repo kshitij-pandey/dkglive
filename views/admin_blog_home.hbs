@@ -1,0 +1,70 @@
+<div class="admin-home-nav" style="display: flex;">
+    <h5 id="blogBtn" class="active-admin-action-btn">BLOGS</h5>
+        <h5 id="videoBtn" style="margin-left: 1rem;">VIDEOS</h5>
+</div>
+<div class="blog-header">
+    <div style="display: flex;">
+        <h2 id="blogTitle">BLOGS</h2>
+        <h2 id="videoTitle" style="display: none;">VIDEOS</h2>
+    </div>
+    <button id='writeBlogBtn'><a href="/add_blog">Write New Blog</a></button>
+    <button style="display: none;" id='addVideoBtn'><a href="/add_video">Add New Video</a></button>
+</div>
+
+<!-- Blog containers start -->
+<section id="BlogContainer" class="section">
+    <div class="insight-card-deck">
+        {{# blogs}}
+        <div class="insight-card">
+            <a style="color: inherit;" href="/blog/{{_id}}">
+                {{# if imgUrl}}
+                <img src="{{imgUrl}}" alt="">
+                {{else}}
+                {{!-- <img src="{{# if imgUrl}} {{imgUrl}} {{else}} ./img/gst_thumb.png" alt=""> --}}
+                <img src="./img/gst_thumb.png" alt="">
+                {{/ if}}
+                <h1 class="title" style="text-transform: uppercase;">{{title}}</h1>
+                <p>{{date}}</p>
+                <div class="blog-action">
+                    <a style="text-decoration: none;" href="/delete/{{_id}}" id="deleteBtn">Delete</a>
+                    <a style="text-decoration: none;" href="/edit/{{_id}}">Edit</a>
+                </div>
+            </a>
+        </div>
+        {{/ blogs}}
+
+    </div>
+</section>
+<!-- Blog containers end -->
+<!-- Blog containers start -->
+<section id="videoContainer" style="display: none;" class="section">
+    <div class="insight-card-deck">
+        {{# videos}}
+        <div class="insight-card">
+            <a style="color: inherit;" href="/blog/{{_id}}">
+                {{# if videoUrl}}
+                {{!-- <img src="{{imgUrl}}" alt=""> --}}
+                <iframe src="{{videoUrl}}" title="title"></iframe>
+                {{else}}
+                {{!-- <img src="{{# if imgUrl}} {{imgUrl}} {{else}} ./img/gst_thumb.png" alt=""> --}}
+                <iframe src="{{videoUrl}}" title="title"></iframe>
+                {{!-- <iframe src="https://www.youtube.com/embed/ksrHwD9cZjQ" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe> --}}
+                {{/ if}}
+                <h1 class="title" style="margin:0">{{video_name}}</h1>
+                <div class="blog-action">
+                    <a style="text-decoration: none;" href="/video/delete/{{_id}}" id="deleteBtn">Delete</a>
+                    {{!-- <a style="text-decoration: none;" href="/edit/{{_id}}">Edit</a> --}}
+                </div>
+            </a>
+        </div>
+        {{/ videos}}
+
+    </div>
+</section>
+<!-- Blog containers end -->
+
+<!-- Trigger/Open The Modal -->
+{{!-- <button id="myBtn">Open Modal</button> --}}

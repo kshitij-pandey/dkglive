@@ -1,0 +1,30 @@
+<section class="insight-page">
+    <div class="insight-header">
+        <h1><span>KNOWLEDGE</span> SECTION</span>
+        </h1>
+        <!-- <p>Read our experts' views on various topics related to tax, accounting and laws.</p> -->
+    </div>
+</section>
+
+<!-- sction insight containers start -->
+<section class="section">
+    <div class="insight-card-deck">
+        {{# blogs}}
+        <div class="insight-card">
+            <a style="color: inherit;" href="/blog/{{_id}}">
+                {{# if imgUrl}}
+                <img src="{{imgUrl}}" alt="">
+                {{else}}
+                {{!-- <img src="{{# if imgUrl}} {{imgUrl}} {{else}} ./img/gst_thumb.png" alt=""> --}}
+                <img src="./img/gst_thumb.png" alt="">
+                {{/ if}}
+                {{!-- <img src="https://chopdakataria.com/wp-content/uploads/2021/05/CBDT-2.jpg" alt=""> --}}
+                <h1 class="title" style="text-transform: uppercase;">{{title}}</h1>
+                <p>{{date}}</p>
+            </a>
+        </div>
+        {{/ blogs}}
+
+    </div>
+</section>
+<!-- sction insight containers end -->
