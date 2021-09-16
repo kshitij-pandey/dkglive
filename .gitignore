@@ -1,7 +1,7 @@
 dist
 node_modules
 
-config/dev.config.js
+
 config/passport.config.js
 config/reactimgupload-be04a-firebase-adminsdk-zmroq-d13bc2fcc3.json
 
