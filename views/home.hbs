@@ -245,7 +245,7 @@
           <img src="{{imgUrl}}" alt="">
           {{else}}
           {{!-- <img src="{{# if imgUrl}} {{imgUrl}} {{else}} ./img/gst_thumb.png" alt=""> --}}
-          <img src="./img/gst_thumb.png" alt="">
+          <img src="./img/imgdd.png" alt="">
           {{/ if}}
           <h1 class="title">{{title}}</h1>
           <p>{{date}}</p>
@@ -271,12 +271,12 @@
     <div id="sync1" class="owl-carousel owl-theme insight-card-deck">
       {{# videos}}
       <div class="insight-card">
-        <a style="color: inherit;" href="/blog/{{_id}}">
+        <a style="color: inherit;" href="{{description}}" target="_blank">
           {{# if videoUrl}}
           <iframe width="100%" height="250px" src="{{videoUrl}}" alt=""></iframe>
           {{else}}
           {{!-- <img src="{{# if imgUrl}} {{imgUrl}} {{else}} ./img/gst_thumb.png" alt=""> --}}
-          <img src="./img/gst_thumb.png" alt="">
+          <img src="./img/imgdd.png" alt="">
           {{/ if}}
           <h1 class="title" style="margin:0 ;">{{video_name}}</h1>
           {{!-- <p>date</p> --}}

@@ -290,7 +290,7 @@ section .anim_from_bottom {
 }
 
 section .insight-card-deck {
-  margin-top: 4rem;
+  margin-top: 2rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -306,7 +306,7 @@ section .insight-card-deck .insight-card {
 
 section .insight-card-deck .insight-card img {
   height: 60%;
-  width: 100%;
+  width: 90%;
   display: table-cell;
   vertical-align: middle;
 }

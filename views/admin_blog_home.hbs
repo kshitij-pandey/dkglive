@@ -16,12 +16,12 @@
     <div class="insight-card-deck">
         {{# blogs}}
         <div class="insight-card">
-            <a style="color: inherit;" href="/blog/{{_id}}">
+            <a style="color: inherit;"href="{{description}}" target="_blank">
                 {{# if imgUrl}}
                 <img src="{{imgUrl}}" alt="">
                 {{else}}
                 {{!-- <img src="{{# if imgUrl}} {{imgUrl}} {{else}} ./img/gst_thumb.png" alt=""> --}}
-                <img src="./img/gst_thumb.png" alt="">
+                <img src="./img/imgdd.png" alt="">
                 {{/ if}}
                 <h1 class="title" style="text-transform: uppercase;">{{title}}</h1>
                 <p>{{date}}</p>
@@ -41,7 +41,7 @@
     <div class="insight-card-deck">
         {{# videos}}
         <div class="insight-card">
-            <a style="color: inherit;" href="/blog/{{_id}}">
+            <a style="color: inherit;" href="{{description}}" target="_blank">
                 {{# if videoUrl}}
                 {{!-- <img src="{{imgUrl}}" alt=""> --}}
                 <iframe src="{{videoUrl}}" title="title"></iframe>
