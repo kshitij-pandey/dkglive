@@ -73,6 +73,11 @@ router.get('/services', (req, res) => {
     res.render('services', { title: "services" });
 })
 
+//Test route
+router.get('/test', (req, res) => {
+    res.render('test', { title: "test"});
+})
+
 //About route
 router.get('/about', (req, res) => {
     res.render('about', { title: 'About' });

@@ -20,11 +20,4 @@ composer.json
 home.html
 index.php
 
-# css
-src/css/fonts.css
-src/css/layout.css
-src/css/main1111111.css
-src/css/main.css.map
-src/css/main.scss
-src/css/responsive.css
-src/css/styles.css
+
